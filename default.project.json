@@ -1,0 +1,12 @@
+{
+    "name": "StateSnap",
+    "tree": {
+        "$className": "DataModel",
+        "ReplicatedStorage": {
+            "$className": "ReplicatedStorage",
+            "StateSnap": {
+                "$path": "./src"
+            }
+        }
+    }
+}

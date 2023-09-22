@@ -1,0 +1,6 @@
+# Roblox place files
+/*.rbxlx*
+/*.rbxl*
+
+# Luau LSP Sourcemap
+/*sourcemap.json
