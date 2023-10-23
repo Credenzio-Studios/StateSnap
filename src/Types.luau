@@ -1,9 +1,6 @@
 export type Value = boolean | number | string | Vector3 | CFrame
 
-export type StateInput = {
-    Name: string,
-    Time: number
-}
+export type StateInput = any
 
 export type StateData = { [string]: Value }
 
