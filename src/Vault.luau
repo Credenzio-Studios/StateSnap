@@ -8,15 +8,18 @@ local maxSize: number = 120
 --- Remove old snapshots from the Vault.
 --- If specified, `offset` determines an amount of additional snapshots to be removed
 local function PruneOld(offset : number?)
+    offset = offset or 0
+
     local numSnapshots = #snapshots
     for _ = maxSize, numSnapshots - 1 + offset do
         table.remove(snapshots, maxSize)
     end
 end
 
---- Gets the latest Snapshot
-function Vault.GetLatest()
-    return snapshots[1]
+--- Gets the latest Snapshot with the given id
+--- @param id The snapshot id. Defaults to 1
+function Vault.GetLatest(id: number)
+    return snapshots[id or 1]
 end
 
 --- Get the Snapshots immediately before and after the given `time`
